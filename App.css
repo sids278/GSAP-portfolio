@@ -68,7 +68,7 @@ body {
 
 .card-title {
   font-size: 1.25rem;
-  color: #67e8f9;
+  color: black;
   font-weight: 600;
 }
 
@@ -169,4 +169,52 @@ body {
 .section-hover-glow:hover {
   border-image: linear-gradient(135deg, #00f0ff, #ff00d4) 1;
   box-shadow: 0 0 15px rgba(0, 255, 255, 0.3), 0 0 30px rgba(255, 0, 212, 0.2);
+}
+.cyberpunk-bg {
+  min-height: 100vh;
+  width: 100%;
+  background: url("https://images.unsplash.com/photo-1619983081563-430f63602758?auto=format&fit=crop&w=2850&q=80") no-repeat center center fixed;
+  background-size: cover;
+  position: relative;
+  z-index: 0;
+}
+
+.cyberpunk-bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(10, 10, 15, 0.85);
+  z-index: -1;
+}
+.experience-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: rgba(20, 25, 35, 0.7);
+  padding: 1.25rem;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.15);
+}
+
+.experience-logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+  object-fit: contain;
+  background: #fff;
+}
+
+.experience-details h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  color: #67e8f9;
+}
+
+.experience-details p {
+  margin: 0.25rem 0;
+  color: #d1d5db;
 }
