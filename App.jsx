@@ -6,12 +6,7 @@ const Section = ({ title, color, children }) => (
   <section
     className="section gsap-fade section-hover-glow"
     style={{
-      background: "linear-gradient(to right, rgba(22, 25, 36, 0.6), rgba(10, 15, 25, 0.6))",
-      borderRadius: "12px",
-      padding: "2rem",
-      marginBottom: "3rem",
-      position: "relative",
-      overflow: "hidden"
+      borderLeft: `4px solid ${color}`
     }}
   >
     <h2 className="section-title" style={{ borderColor: color }}>{title}</h2>
@@ -60,7 +55,7 @@ export default function App() {
       .then(data => {
         const projects = data.map(repo => ({
           title: repo.name,
-          desc: repo.description || "Check for yourself by opening it in my Github :)", 
+          desc: repo.description || "Check for yourself by opening it in my Github :)",
           tech: repo.language || "N/A",
           url: repo.html_url
         }));
