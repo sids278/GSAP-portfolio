@@ -1,0 +1,60 @@
+@keyframes cursor-blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.cursor {
+  display: inline-block;
+  width: 10px;
+  height: 18px;
+  background-color: #ffffff;
+  animation: cursor-blink 1s infinite;
+}
+
+.typing-effect {
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 2s steps(40, end);
+}
+
+/* Terminal scrollbar styling */
+.terminal-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.terminal-content::-webkit-scrollbar-track {
+  background: #0d1117;
+}
+
+.terminal-content::-webkit-scrollbar-thumb {
+  background-color: #30363d;
+  border-radius: 10px;
+}
+
+/* Custom selection color */
+::selection {
+  background: rgba(100, 255, 100, 0.3);
+  color: #ffffff;
+}
+
+/* Focus outline for accessibility */
+:focus {
+  outline: 2px solid #33ff33;
+  outline-offset: 2px;
+}
